@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache
+Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="baseLayout"
+                template="/WEB-INF/layout/base.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header"
+                       value="/WEB-INF/layout/header.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer"
+                       value="/WEB-INF/layout/footer.jsp" />
+    </definition>
+    
+    <definition name="restaurant" extends="baseLayout">
+        <put-attribute name="title" value="" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/restaurant.jsp" />
+    </definition>
+    <definition name="restaurantDetails" extends="baseLayout">
+        <put-attribute name="title" value="" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/restaurantDetails.jsp" />
+    </definition>
+    <!--sảnh-->
+    <definition name="lobby" extends="baseLayout">
+        <put-attribute name="title" value="" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/lobby.jsp" />
+    </definition>
+    
+    <!--menu-->
+    <definition name="menu" extends="baseLayout">
+        <put-attribute name="title" value="" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/menu.jsp" />
+    </definition>
+    <!--dich vu-->
+    <definition name="service" extends="baseLayout">
+        <put-attribute name="title" value="" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/service.jsp" />
+    </definition>
+    <!--admin quản trị layout-->
+    <definition name="baseAdminLayout"
+                template="/WEB-INF/layout/base-admin.jsp">
+        <put-attribute name="title" value="Quản trị nhà hàng tiệc cưới" />
+        <put-attribute name="left"
+                       value="/WEB-INF/layout/admin-left.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer"
+                       value="/WEB-INF/layout/admin-footer.jsp" />
+    </definition>
+    <!--trang quản trị-->
+    <definition name="stats" extends="baseAdminLayout">
+        <put-attribute name="title" value="Trang quản trị" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/stats.jsp" />
+    </definition>
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title" value="" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/index.jsp" />
+    </definition>
+    <definition name="register" extends="baseLayout">
+        <put-attribute name="title" value="" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/register.jsp" />
+    </definition>
+    <!--quản lý nhân viên-->
+    <definition name="employee" extends="baseAdminLayout">
+        <put-attribute name="title" value="Quản lý nhân viên" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/employee.jsp" />
+    </definition>
+    <!--cập nhật thông tin nhân viên-->
+    <definition name="updateEmployee" extends="baseAdminLayout">
+        <put-attribute name="title" value="Tra cứu tiệc cưới" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/updateEmployee.jsp" />
+    </definition>
+    
+     <definition name="cart" extends="baseAdminLayout">
+        <put-attribute name="title" value="Giỏ Hàng" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/cart.jsp" />
+    </definition>
+</tiles-definitions>
